@@ -2,4 +2,4 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('collective.mosaicpage')
+_ = MessageFactory("collective.mosaicpage")

@@ -1,17 +1,14 @@
-from plone.app.testing import (
-    applyProfile,
-    FunctionalTesting,
-    IntegrationTesting,
-    PLONE_FIXTURE,
-    PloneSandboxLayer,
-)
+from plone.app.testing import applyProfile
+from plone.app.testing import FunctionalTesting
+from plone.app.testing import IntegrationTesting
+from plone.app.testing import PLONE_FIXTURE
+from plone.app.testing import PloneSandboxLayer
 from plone.testing import zope
 
 import collective.mosaicpage
 
 
 class CollectiveMosaicpageLayer(PloneSandboxLayer):
-
     defaultBases = (PLONE_FIXTURE,)
 
     def setUpZope(self, app, configurationContext):
@@ -22,7 +19,7 @@ class CollectiveMosaicpageLayer(PloneSandboxLayer):
         self.loadZCML(package=collective.mosaicpage)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'collective.mosaicpage:default')
+        applyProfile(portal, "collective.mosaicpage:default")
 
 
 COLLECTIVE_MOSAICPAGE_FIXTURE = CollectiveMosaicpageLayer()
@@ -30,11 +27,11 @@ COLLECTIVE_MOSAICPAGE_FIXTURE = CollectiveMosaicpageLayer()
 
 COLLECTIVE_MOSAICPAGE_INTEGRATION_TESTING = IntegrationTesting(
     bases=(COLLECTIVE_MOSAICPAGE_FIXTURE,),
-    name='CollectiveMosaicpageLayer:IntegrationTesting',
+    name="CollectiveMosaicpageLayer:IntegrationTesting",
 )
 
 
 COLLECTIVE_MOSAICPAGE_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(COLLECTIVE_MOSAICPAGE_FIXTURE,),
-    name='CollectiveMosaicpageLayer:FunctionalTesting',
+    name="CollectiveMosaicpageLayer:FunctionalTesting",
 )

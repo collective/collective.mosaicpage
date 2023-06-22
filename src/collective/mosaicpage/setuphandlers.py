@@ -5,6 +5,7 @@ from zope.interface import implementer
 
 import logging
 
+
 try:
     from plone.base.interfaces import INonInstallable
 except ImportError:
