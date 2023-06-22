@@ -7,7 +7,14 @@ A page with Mosaic selected as only layout
 Features
 --------
 
-- Can be bullet points
+- Adds a portal_type MosaicPage.
+- This is a Container, where you can add Images.
+- The ``layout_view`` from ``plone.app.mosaic`` is the only possible layout.
+- On install, the layout behaviors and views are removed from all other portal types.
+  We remove the layout property from all content items that have ``layout_view`` as layout:
+  they will use the default view again.
+- Only Manager and Site Administrator can add MosaicPages.
+  Editors can still edit them.
 
 
 Installation
