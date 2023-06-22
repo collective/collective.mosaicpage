@@ -14,7 +14,7 @@
 
   <property name="allow_discussion">False</property>
   <property name="factory">MosaicPage</property>
-  <property name="icon_expr"></property>
+  <property name="icon_expr">string:layout-text-window</property>
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
@@ -91,6 +91,7 @@
       condition_expr=""
       i18n:attributes="title"
       i18n:domain="plone"
+      icon_expr="string:toolbar-action/view"
       title="View"
       url_expr="string:${object_url}"
       visible="True">
@@ -102,6 +103,7 @@
       condition_expr="not:object/@@plone_lock_info/is_locked_for_current_user|python:True"
       i18n:attributes="title"
       i18n:domain="plone"
+      icon_expr="string:toolbar-action/edit"
       title="Edit"
       url_expr="string:${object_url}/edit"
       visible="True">
