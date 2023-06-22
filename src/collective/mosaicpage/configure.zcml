@@ -8,7 +8,6 @@
   <include package="plone.app.mosaic" />
   <include file="permissions.zcml" />
   <include file="profiles.zcml" />
-  <include package=".browser" />
 
   <!-- -*- extra stuff goes here -*- -->
 
