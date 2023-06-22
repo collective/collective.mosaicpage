@@ -46,7 +46,8 @@ class MosaicPageIntegrationTest(unittest.TestCase):
         )
 
     def test_ct_mosaic_page_adding(self):
-        setRoles(self.portal, TEST_USER_ID, ['Contributor'])
+        # Note: Contributor cannot add.
+        setRoles(self.portal, TEST_USER_ID, ['Site Administrator'])
         obj = api.content.create(
             container=self.portal,
             type='MosaicPage',
@@ -68,7 +69,7 @@ class MosaicPageIntegrationTest(unittest.TestCase):
         self.assertNotIn('mosaic_page', parent.objectIds())
 
     def test_ct_mosaic_page_globally_addable(self):
-        setRoles(self.portal, TEST_USER_ID, ['Contributor'])
+        setRoles(self.portal, TEST_USER_ID, ['Site Administrator'])
         fti = queryUtility(IDexterityFTI, name='MosaicPage')
         self.assertTrue(
             fti.global_allow,
@@ -76,7 +77,7 @@ class MosaicPageIntegrationTest(unittest.TestCase):
         )
 
     def test_ct_mosaic_page_filter_content_type_true(self):
-        setRoles(self.portal, TEST_USER_ID, ['Contributor'])
+        setRoles(self.portal, TEST_USER_ID, ['Site Administrator'])
         fti = queryUtility(IDexterityFTI, name='MosaicPage')
         portal_types = self.portal.portal_types
         parent_id = portal_types.constructContent(
