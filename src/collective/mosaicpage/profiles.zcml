@@ -27,18 +27,12 @@
       name="collective.mosaicpage-hiddenprofiles"
       />
 
-  <!-- <gs:upgradeSteps
-        source="1000"
-        destination="1001"
-        profile="collective.mosaicpage:default">
-      <gs:upgradeStep
-           title=""
-           handler=".upgrades.upgrade"
-           />
-      <gs:upgradeDepends
-           title=""
-           import_steps="plone.app.registry"
-           />
-    </gs:upgradeSteps> -->
+  <gs:upgradeDepends
+      title="Apply typeinfo"
+      source="1000"
+      destination="1001"
+      profile="collective.mosaicpage:default"
+      import_steps="typeinfo"
+      />
 
 </configure>
