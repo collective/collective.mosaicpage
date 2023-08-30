@@ -35,4 +35,12 @@
       import_steps="typeinfo"
       />
 
+  <gs:upgradeDepends
+      title="Apply registry: hide basic layout"
+      source="1001"
+      destination="1002"
+      profile="collective.mosaicpage:default"
+      import_steps="plone.app.registry"
+      />
+
 </configure>
