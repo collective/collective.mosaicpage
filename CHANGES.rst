@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.0a3 (unreleased)
+1.0.0a3 (2023-08-31)
 --------------------
 
 - Patched plone.app.mosaic.widget.LayoutWidget: do now enable on add forms.
