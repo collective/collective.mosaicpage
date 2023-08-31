@@ -5,7 +5,10 @@ Changelog
 1.0.0a3 (unreleased)
 --------------------
 
-- Nothing changed yet.
+- Patched plone.app.mosaic.widget.LayoutWidget: do now enable on add forms.
+  [maurits]
+
+- Add layout html for MosaicPage, and hide basic layout.  [maurits]
 
 
 1.0.0a2 (2023-07-21)
